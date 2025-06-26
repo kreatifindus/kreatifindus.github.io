@@ -5,100 +5,161 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio | Glow Dark</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
+
+  <!-- Navbar -->
   <header>
     <div class="logo">kreatifindus</div>
     <nav>
-      <a href="#">Home</a>
-      <a href="#">Portfolio</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
+      <a href="#hero">Home</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#cv">CV</a>
+      <!-- <a href="#molet">Contact</a> -->
     </nav>
   </header>
 
   <!-- Background Animation -->
-   <canvas id="bgCanvas"></canvas>
+  <canvas id="bgCanvas"></canvas>
 
-  <section class="hero">
+  <!-- HOME -->
+  <section id="hero" class="hero">
     <div class="hero-text">
-      <h1>Graphic & UI Design <br> Frontend Developer</h1>
-      <p>Hello, I am an enthusiastic and experienced Graphic Design, UI Design and Frontend Developer.</p>
-      <button>Find More</button>
+      <h1>Graphic & UI Designer <br> Tech Enthusiast</h1>
+      <p>Hello, I am a technology and design enthusiast. I have some expertise in design and also UI design. I'm also learning about frontend developers for the future.</p>
+      <!-- <button>Find More</button> -->
     </div>
     <div class="hero-img">
-      <img src="asset/lnpage1.png" alt="hero image">
+      <img src="asset/logo.png" alt="hero image">
     </div>
   </section>
 
-  <section class="portfolio">
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="portfolio">
     <h2>PORTOFOLIO</h2>
     <p>Discover the various projects I’ve worked on...</p>
-    <div class="portfolio-slider">
-      <button onclick="prevSlide()">&#8678;</button>
-      <div class="slide" onclick="showModal('Project 1')">
-        <img src="asset//lnpage2.png" alt="Portfolio 1">
-        <div class="slide-title">Project 1</div>
-      </div>
-      <div class="slide" onclick="showModal('Project 2')">
-        <img src="asset/lnpage1.png" alt="Portfolio 2">
-        <div class="slide-title">Project 2</div>
-      </div>
-      <div class="slide" onclick="showModal('Project 3')">
-        <img src="asset/lnpage2.png" alt="Portfolio 3">
-        <div class="slide-title">Project 3</div>
-      </div>
-      <div class="slide" onclick="showModal('Project 2')">
-        <img src="asset/lnpage1.png" alt="Portfolio 2">
-        <div class="slide-title">Project 2</div>
-      </div>
-      <div class="slide" onclick="showModal('Project 3')">
-        <img src="asset/lnpage2.png" alt="Portfolio 3">
-        <div class="slide-title">Project 3</div>
-      </div>
-      <div class="slide" onclick="showModal('Project 2')">
-        <img src="asset/lnpage1.png" alt="Portfolio 2">
-        <div class="slide-title">Project 2</div>
-      </div>    
-      <button onclick="nextSlide()">&#8680;</button>
+    <div class="portfolio-grid">
+    <!-- CARD -->
+     <!-- Coffee Card -->
+    <div class="portfolio-item">
+      <img src="asset/kopi1.png" alt="Project 1">
+      <div class="item-title">Social Media Coffee Promotion</div>
+      <!-- <p class="description"> Teks Here</p>  -->
     </div>
+    <div class="portfolio-item">
+      <img src="asset/kopi2.png" alt="Project 2">
+      <div class="item-title">Social Media Coffee Promotion</div>
+    </div>
+    <div class="portfolio-item">
+      <img src="asset/kopi3.png" alt="Project 2">
+      <div class="item-title">Social Media Coffee Promotion</div>
+    </div>
+    <!-- Fashion Card -->
+    <div class="portfolio-item">
+      <img src="asset/fas1.png" alt="Project 2">
+      <div class="item-title">Social Media Fashion Promotion</div>
+    </div>
+    <div class="portfolio-item">
+      <img src="asset/fas2.png" alt="Project 2">
+      <div class="item-title">Social Media Fashion Promotion</div>
+    </div>
+    <div class="portfolio-item">
+      <img src="asset/fas3.png" alt="Project 2">
+      <div class="item-title">Social Media Fashion Promotion</div>
+    </div>
+    <!-- Website UI-->
+    <div class="portfolio-item">
+      <img src="asset/lpnaf.png" alt="Project 2">
+      <div class="item-title">Landing Page Naufa Disperse</div>
+    </div>
+    <div class="portfolio-item">
+      <img src="asset/webnaf.png" alt="Project 2">
+      <div class="item-title">Naufa Disperse Website Mock Up</div>
+    </div>
+    <div class="portfolio-item">
+      <img src="asset/motor.png" alt="Project 2">
+      <div class="item-title">Landing Page Motorku</div>
+    </div>
+    <div class="portfolio-item">
+      <img src="asset/webmo.png" alt="Project 2">
+      <div class="item-title">Motorku Website Mock Up</div>
+    </div>
+    <div class="portfolio-item">
+      <img src="asset/coshe.png" alt="Project 2">
+      <div class="item-title">Mobile Apps Coshe</div>
+    </div>
+    <div class="portfolio-item">
+      <img src="asset/cosap.png" alt="Project 2">
+      <div class="item-title">Coshe Apps Mock Up</div>
+    </div>
+    <div class="portfolio-item">
+      <img src="asset/foow.png" alt="Project 2">
+      <div class="item-title">Landing Page Foowest</div>
+    </div>
+    <div class="portfolio-item">
+      <img src="asset/webfo.png" alt="Project 2">
+      <div class="item-title">Foowest Website Mock Up</div>
+    </div>
+    <div class="portfolio-item">
+      <img src="asset/logda.png" alt="Project 2">
+      <div class="item-title">Register, Login, and Dashboard Motorku Website</div>
+    </div>
+  </div>
+  <div class="see-more">
+    <a href="portfolio-details.html">Lihat Selengkapnya</a>
+  </div>
   </section>
 
-  <section class="about">
-    <h2>ABOUT ME</h2>
-    <div class="about-container">
-      <img src="asset/lnpage1.png" alt="About">
-      <div class="about-text">
-        <p>I am a Graphic Designer and front end developer with approximately 2 years of experience...</p>
-        <div class="skills">
-          <div>HTML</div>
-          <div>CSS</div>
-          <div>JavaScript</div>
-          <div>Figma</div>
-          <div>Photoshop</div>
-        </div>
-      </div>
+  <!-- CV -->
+  <section id="cv" class="about">
+  <h2>CV</h2>
+  
+  <div class="about-container">
+    <img src="asset/cv.png" alt="CV Image">
+  </div>
+  
+  <div class="portfoliolin">
+    <div class="skills">
+      <div>Figma</div>
+      <div>Corel</div>
+      <div>Canva</div>
+      <div>HTML</div>
+      <div>CSS</div>
+      <div>JavaScript</div>
     </div>
+  </div>
+
+  <div class="portfoliolin">
+    <h3> Other Portfolio </h3>
+    <div class="portfolio-links">
+      <a href="https://www.canva.com/p/fin-images" target="_blank">Canva</a>
+      <a href="https://freepik.com/author/frdauss-rhman" target="_blank">Freepik</a>
+      <a href="https://stock.adobe.com/contributor/208862310/kreatifindus" target="_blank">Adobe Stock</a>
+      <a href="https://capcut.com/profile/C6a5EAnmGcK0scjkPMqcImTPC53OmAWfTBNN8VJDZng" target="_blank">Capcut</a>
+    </div>
+  </div>
   </section>
 
-  <section class="contact">
+  <!-- MOTIVATION LETTER -->
+  <!-- <section id="molet" class="molet">
     <h2>CONTACT</h2>
     <form>
       <input type="email" placeholder="Email">
       <textarea rows="4" placeholder="Message"></textarea>
       <button>Send</button>
     </form>
-  </section>
+  </section> -->
 
+  <!-- FOOTER -->
   <footer>
     <div class="socials">
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
-      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="https://www.instagram.com/firdausnhr_rahman" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/firdausnhr" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+      <!-- <a href="mailto:fridausrahman08@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i></a> -->
+      <!-- <a href="https://github.com/kreatifindus" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a> -->
     </div>
-    <p>copyright by firdausrhman</p>
+    <p>copyright &copy; firdausrhman | portfolio version v.1</p>
   </footer>
 
   <script>
@@ -112,6 +173,6 @@
       alert("Next slide clicked");
     }
   </script>
-  <script src="background.js"></script>
+  <script src="js/background.js"></script>
 </body>
 </html>

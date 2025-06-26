@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  body {
+    background: linear-gradient(270deg, #0f0f0f, #1a1a1a);
+    background-size: 400% 400%;
+    animation: bgAnimate 10s ease infinite;
+    color: white;
+    overflow-x: hidden;
+  }
+  canvas#bgCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: radial-gradient(#0f0f0f, #000000);
+  }
+  @keyframes bgAnimate {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* HEADER */
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 10px rgba(0,255,255,0.3);
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    backdrop-filter: blur(12px);
+  }
+  header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: cyan;
+  }
+  header nav a {
+    margin-left: 2rem;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+  }
+  header nav a:hover {
+    color: cyan;
+  }
+
+  /* HOME SECTION */
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 3rem;
+  }
+  .hero-text {
+    max-width: 50%;
+  }
+  .hero-text h1 {
+    font-size: 3rem;
+    color: cyan;
+  }
+  .hero-text p {
+    margin: 1rem 0;
+  }
+  .hero-text button {
+    padding: 0.8rem 1.5rem;
+    background: cyan;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .hero-img img {
+    width: 400px;
+    border-radius: 20px;
+    /* box-shadow: 0 0 20px cyan; */
+  }
+
+  /* PORTFOLIO SECTION */
+.portfolio {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: rgba(0,23,68, 0.6);
+  color: white;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 2rem auto;
+}
+
+.portfolio-item {
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 0 15px cyan;
+  transition: transform 0.3s ease;
+}
+.portfolio-item:hover {
+  transform: scale(1.05);
+}
+.portfolio-item img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.item-title {
+  margin-top: 0.5rem;
+  color: #001744;
+  font-weight: bold;
+}
+/* .project .description {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+.see-more {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.see-more a {
+  background-color: #00bcd4;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 188, 212, 0.3);
+  transition: 0.3s ease;
+}
+
+.see-more a:hover {
+  background-color: #0097a7;
+  box-shadow: 0 6px 16px rgba(0, 188, 212, 0.5);
+}
+
+
+  /* ABOUT SECTION */
+.about {
+  background-color: rgba(0, 23, 68, 0.7); /* Warna sesuai #001744 */
+  padding: 60px 20px;
+  color: white;
+  text-align: center;
+}
+
+.about h2 {
+  /* font-size: 2rem; */
+  margin-bottom: 2rem;
+  color: cyan;
+}
+
+.about-container img {
+  width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px cyan;
+  margin-bottom: 30px;
+}
+
+/* Box untuk skills */
+/* .skills-box {
+  display: flex;
+  justify-content: center;
+  padding: 25px 30px 50px 30px;
+}*/
+
+  .skills {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,255,255,0.2);
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.skills div {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  color: white;
+  font-size: 0.9rem;
+  box-shadow: 0 0 10px rgba(0,255,255,0.3);
+} 
+
+/* Box Portfolio */
+.portofoliolin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 200px;
+}
+
+.portofoliolin h3 {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.portfolio-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,255,255,0.2);
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.portfolio-links a {
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.portfolio-links a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.8);
+}
+
+
+/* FOOTER */
+  footer {
+    padding: 2rem;
+    text-align: center;
+    background: rgba(0,0,0,0.6);
+    margin-top: 3rem;
+    position: relative;
+  }
+  .socials {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+  }
+  .socials a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+  }
+  .socials a:hover {
+    background: cyan;
+  }
+
+  /* ========== RESPONSIVE VERSION ========== */
+
+/* Untuk tablet (lebar maks 1024px) */
+@media (max-width: 1024px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .hero-text {
+      max-width: 100%;
+    }
+  
+    .hero-img img {
+      width: 300px;
+      margin-top: 2rem;
+    }
+  
+    .about-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-text {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+  
+  /* Untuk mobile (lebar maks 768px) */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+  
+    header nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+   .portfolio-grid {
+    grid-template-columns: 1fr;
+    }
+    .portfolio-slider {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  
+    .slide img {
+      width: 100%;
+      max-width: 300px;
+    }
+  
+    .about-container img {
+      width: 100%;
+      max-width: 250px;
+    }
+  
+    .contact form {
+      width: 90%;
+    }
+  
+    footer .socials {
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  }
+  
